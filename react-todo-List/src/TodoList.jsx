@@ -28,7 +28,7 @@ export default function TodoList(){
                     {
                         todo.map((todo) => {
                        return <li className="liLists">{todo}</li>
-})
+                     })
                     }
             </ul>
         </div>
