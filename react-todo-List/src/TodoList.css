@@ -1,0 +1,17 @@
+.inputField{
+    width: 300px;
+    height: 40px;
+}
+
+.inputbtn {
+    margin: 20px;
+    background: linear-gradient(rgb(255, 52, 197),rgb(255, 165, 233));
+}
+
+.todoLists {
+    background: linear-gradient(rgb(24, 24, 255),rgb(142, 142, 255));
+}
+
+.liLists {
+    color: rgba(70, 18, 119, 0.985);
+}
