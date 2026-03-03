@@ -1,19 +1,28 @@
 import { useState } from "react";
 import "./TodoList.css";
+import {v4 as uuidv4} from "uuid";
 
 export default function TodoList(){
 
-    let [todo,setTodo] = useState(["learn react","learn redux"]);
+    let [todo,setTodo] = useState([{
+        task: "sample-task",id: uuidv4()
+    }]);
     let [newTodo, setNewTodo] = useState("");
 
 
     let addNewTask = () => {
-         setTodo([...todo,newTodo])
+         setTodo((prevTodos) => {
+            return[...prevTodos,{task: newTodo,id: uuidv4()}]
+         });
          setNewTodo("");
     }
 
     let updateTodoValue = (event) => {
         setNewTodo(event.target.value);
+    }
+
+    let deleteTodo = (id) =>{
+      setTodo(todo.filter((todo) => todo.id != id));
     }
 
     return(
@@ -27,7 +36,13 @@ export default function TodoList(){
             <ul>
                     {
                         todo.map((todo) => {
-                       return <li className="liLists">{todo}</li>
+                       return <li key={todo.id} className="liLists">
+                        <span>
+                            {todo.task}
+                        </span> &ensp; &ensp;
+                        <button onClick={() => deleteTodo(todo.id)}>Delete</button>
+                        
+                       </li>
                      })
                     }
             </ul>
