@@ -9,3 +9,10 @@
 .ticket2{
     margin: 20px;
 }
+
+.ticketbtn{
+    background-color: bisque;
+    color: teal;
+    border: 0px;
+    
+}
