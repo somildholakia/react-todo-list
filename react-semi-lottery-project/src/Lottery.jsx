@@ -22,7 +22,6 @@ export default function Lottery() {
                     {ticket[1]}
 
                     {ticket[2]}
-
                 </span>
 
             </div>
