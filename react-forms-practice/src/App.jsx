@@ -1,5 +1,5 @@
 import './App.css'
-import Form from './Form';
+// import Form from './Form';
 import Comment from './Comment';
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
   return (
     <>
 
-        <Form />
+        {/* <Form /> */}
         <Comment />
     </>
   );
