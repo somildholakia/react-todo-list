@@ -16,7 +16,9 @@ export default function Comment(){
     }
 
     let handleFormFeatures = (event) => {
+       console.log(formdata)
         event.preventDefault();
+    
     }
 
     return (
